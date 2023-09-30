@@ -50,12 +50,12 @@ checking_sc() {
     echo -e "\033[42m          404 NOT FOUND AUTOSCRIPT          \033[0m"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     echo -e ""
-    echo -e "            ${RED}PERMISSION DENIED !${NC}"
+    echo -e "            ${RED}MAAF ANDA HARUS IZIN IP DULU !${NC}"
     echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
     echo -e "             \033[0;33mContact Admin :${NC}"
     echo -e "      \033[0;36mTelegram${NC} t.me/Kytxz"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6281774970898"
+    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6285236846667"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit
   fi
@@ -361,7 +361,7 @@ function password_default() {
     <code>User Script:</code> <code>$username</code>
     <code>Exp Script :</code> <code>$exp</code>
     ============================
-    (C) Copyright 2023 By Geo Project
+    (C) Copyright 2023 By KANGSANTRI 
     ============================
 "
 
@@ -1083,7 +1083,7 @@ rm -rf /root/domain
 secs_to_human "$(($(date +%s) - ${start}))"
 echo ""
 echo " "
-echo "=====================-[ MYRIDVPN ]-===================="
+echo "=====================-[ KANGSANTRI ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -1117,7 +1117,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "=====================-[ MYRIDVPN ]-===================="
+echo "=====================-[ KANGSANTRI ]-===================="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
