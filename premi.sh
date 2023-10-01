@@ -29,7 +29,7 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To Kyt Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Welcome To KANGSANTRI Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e "     This Will Quick Setup VPN Server On Your Server"
 echo -e "         Auther : ${green} KANGSANTRI ${NC}${YELLOW}(${NC} ${green}KANGSANTRI ${NC}${YELLOW})${NC}"
 echo -e "       © Recode By KANGSANTRI ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
