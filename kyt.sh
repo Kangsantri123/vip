@@ -2,6 +2,12 @@
 NS=$( cat /etc/xray/dns )
 PUB=$( cat /etc/slowdns/server.pub )
 domain=$(cat /etc/xray/domain)
+cd /usr/bin
+rm -rf bot
+rm -rf kyt
+cd /etc/systemd/system/
+rm -rf kyt.service
+cd
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
@@ -17,7 +23,7 @@ mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget https://raw.githubusercontent.com/Hermananza/vip/main/limit/kyt.zip
+wget https://raw.githubusercontent.com/Kangsantri123/vip/main/limit/kyt.zip
 clear
 unzip kyt.zip
 clear
