@@ -53,7 +53,7 @@
 ### Auther
 ```
 ```
-kang santri :<a href="https://t.me/@alwance" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a><br>
+kang santri :<a href="https://wa.me/6285236846667" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=WhatsApp&label=WhatsApp&message=Click%20Here&color=blue"></a><br>
 ```
 ```
 ``
