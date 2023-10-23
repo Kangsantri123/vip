@@ -1,24 +1,20 @@
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&lines=S+C+R+I+P+T++A+L+W+A+N++V+P" />
-</p>
+
 
 ### INSTALL SCRIPT 
 <pre><code>apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/Kangsantri123/vip/main/premi.sh && chmod +x premi.sh && ./premi.sh
 </code></pre>
 
 ### PERINTAH UPDATE 
-<pre><code>wget https://raw.githubusercontent.com/Kangsantri123/vip/main/update.sh && chmod +x update.sh && ./update.sh</code></pre>
+<pre><code>wget https://raw.githubusercontent.com/Kangsantri123/vip/main/update.sh && chmod +x update.sh && ./update.shcode></pre>
 
 ### TESTED ON OS 
 - UBUNTU 20.04.05
 - DEBIAN 10
-- HARUS IZIN IP DULU YA SAYANK
 
 ### FITUR TAMBAHAN
 - Tambah Swap 1GiB
 - Pemasangan yang dinamis
 - Tuning profile pada server
-- Xray Core by [@kangsantri_Store](https://github.com/askykenza)
 - Penambahan fail2ban
 - Auto block sebagian ads indo by default
 - Auto clear log per 3 menit
@@ -51,12 +47,3 @@
 - WEBSOCKET : ON
 - Always Use HTTPS : OFF
 - UNDER ATTACK MODE : OFF
-```
-### Auther
-```
-```
-kang santri :<a href="https://wa.me/6285236846667" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=WhatsApp&label=WhatsApp&message=Click%20Here&color=blue"></a><br>
-```
-```
-``
-```
